@@ -824,7 +824,7 @@ var APP_DATA = {
             infoHotspots: [],
         },
     ],
-    name: "2747 Tiergarten Lane",
+    name: "2747 Tiergarten Lane Tour",
     settings: {
         mouseViewMode: "drag",
         autorotateEnabled: false,
