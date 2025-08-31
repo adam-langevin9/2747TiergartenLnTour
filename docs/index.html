@@ -1,246 +1,143 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>2747 Tiergarten Lane Tour</title>
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui"
-        />
-        <style>
-            @-ms-viewport {
-                width: device-width;
-            }
-        </style>
-        <link rel="stylesheet" href="vendor/reset.min.css" />
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body class="multiple-scenes view-control-buttons">
-        <div id="pano"></div>
+<head>
+<title>2747 Teirgarten Ln</title>
+<meta charset="utf-8">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+<style> @-ms-viewport { width: device-width; } </style>
+<link rel="stylesheet" href="vendor/reset.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="multiple-scenes ">
 
-        <div id="sceneList">
-            <ul class="scenes">
-                <a
-                    href="javascript:void(0)"
-                    class="scene"
-                    data-id="0-360-hdr-1"
-                >
-                    <li class="text">Entryway</li>
-                </a>
+<div id="pano"></div>
 
-                <a
-                    href="javascript:void(0)"
-                    class="scene"
-                    data-id="1-360-hdr-2"
-                >
-                    <li class="text">Downstairs Bathroom</li>
-                </a>
+<div id="sceneList">
+  <ul class="scenes">
+    
+      <a href="javascript:void(0)" class="scene" data-id="0-entryway">
+        <li class="text">Entryway</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="1-downstairs-bathroom">
+        <li class="text">Downstairs Bathroom</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="2-foyer-1">
+        <li class="text">Foyer 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="3-foyer-2">
+        <li class="text">Foyer 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="4-kitchen">
+        <li class="text">Kitchen</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="5-foyer-3">
+        <li class="text">Foyer 3</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="6-dinning-room-1">
+        <li class="text">Dinning Room 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="7-dinning-room-2">
+        <li class="text">Dinning Room 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="8-livingroom">
+        <li class="text">Livingroom</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="9-bottom-of-stairs">
+        <li class="text">Bottom Of Stairs</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="10-middle-of-stairs">
+        <li class="text">Middle Of Stairs</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="11-top-of-stairs">
+        <li class="text">Top Of Stairs</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="12-bedroom-1">
+        <li class="text">Bedroom 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="13-upstairs-hallway-1">
+        <li class="text">Upstairs Hallway 1</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="14-bedroom-2">
+        <li class="text">Bedroom 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="15-upstairs-hallway-2">
+        <li class="text">Upstairs Hallway 2</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="16-upstairs-bathroom">
+        <li class="text">Upstairs Bathroom</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="17-primary-bedroom">
+        <li class="text">Primary Bedroom</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="18-primary-bathroom">
+        <li class="text">Primary Bathroom</li>
+      </a>
+    
+  </ul>
+</div>
 
-                <a
-                    href="javascript:void(0)"
-                    class="scene"
-                    data-id="2-360-hdr-3"
-                >
-                    <li class="text">Foyer 1</li>
-                </a>
+<div id="titleBar">
+  <h1 class="sceneName"></h1>
+</div>
 
-                <a
-                    href="javascript:void(0)"
-                    class="scene"
-                    data-id="3-360-hdr-4"
-                >
-                    <li class="text">Foyer 2</li>
-                </a>
+<a href="javascript:void(0)" id="autorotateToggle">
+  <img class="icon off" src="img/play.png">
+  <img class="icon on" src="img/pause.png">
+</a>
 
-                <a
-                    href="javascript:void(0)"
-                    class="scene"
-                    data-id="4-360-hdr-5"
-                >
-                    <li class="text">Kitchen</li>
-                </a>
+<a href="javascript:void(0)" id="fullscreenToggle">
+  <img class="icon off" src="img/fullscreen.png">
+  <img class="icon on" src="img/windowed.png">
+</a>
 
-                <a
-                    href="javascript:void(0)"
-                    class="scene"
-                    data-id="5-360-hdr-6"
-                >
-                    <li class="text">Foyer 3</li>
-                </a>
+<a href="javascript:void(0)" id="sceneListToggle">
+  <img class="icon off" src="img/expand.png">
+  <img class="icon on" src="img/collapse.png">
+</a>
 
-                <a
-                    href="javascript:void(0)"
-                    class="scene"
-                    data-id="6-360-hdr-7"
-                >
-                    <li class="text">Dining Room 1</li>
-                </a>
+<a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
+  <img class="icon" src="img/up.png">
+</a>
+<a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
+  <img class="icon" src="img/down.png">
+</a>
+<a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
+  <img class="icon" src="img/left.png">
+</a>
+<a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
+  <img class="icon" src="img/right.png">
+</a>
+<a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
+  <img class="icon" src="img/plus.png">
+</a>
+<a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
+  <img class="icon" src="img/minus.png">
+</a>
 
-                <a
-                    href="javascript:void(0)"
-                    class="scene"
-                    data-id="7-360-hdr-8"
-                >
-                    <li class="text">Dining Room 2</li>
-                </a>
+<script src="vendor/screenfull.min.js" ></script>
+<script src="vendor/bowser.min.js" ></script>
+<script src="vendor/marzipano.js" ></script>
 
-                <a
-                    href="javascript:void(0)"
-                    class="scene"
-                    data-id="8-360-hdr-9"
-                >
-                    <li class="text">Living Room</li>
-                </a>
+<script src="data.js"></script>
+<script src="index.js"></script>
 
-                <a
-                    href="javascript:void(0)"
-                    class="scene"
-                    data-id="9-360-hdr-10"
-                >
-                    <li class="text">Bottom of Stairs</li>
-                </a>
-
-                <a
-                    href="javascript:void(0)"
-                    class="scene"
-                    data-id="10-360-hdr-11"
-                >
-                    <li class="text">Middle of Stairs</li>
-                </a>
-
-                <a
-                    href="javascript:void(0)"
-                    class="scene"
-                    data-id="11-360-hdr-12"
-                >
-                    <li class="text">Top of Stairs</li>
-                </a>
-
-                <a
-                    href="javascript:void(0)"
-                    class="scene"
-                    data-id="12-360-hdr-13"
-                >
-                    <li class="text">Bathroom 1</li>
-                </a>
-
-                <a
-                    href="javascript:void(0)"
-                    class="scene"
-                    data-id="13-360-hdr-14"
-                >
-                    <li class="text">Upstairs Hallway 1</li>
-                </a>
-
-                <a
-                    href="javascript:void(0)"
-                    class="scene"
-                    data-id="14-360-hdr-15"
-                >
-                    <li class="text">Bedroom 2</li>
-                </a>
-
-                <a
-                    href="javascript:void(0)"
-                    class="scene"
-                    data-id="15-360-hdr-16"
-                >
-                    <li class="text">Upstairs Hallway 2</li>
-                </a>
-
-                <a
-                    href="javascript:void(0)"
-                    class="scene"
-                    data-id="16-360-hdr-17"
-                >
-                    <li class="text">Upstairs Bathroom</li>
-                </a>
-
-                <a
-                    href="javascript:void(0)"
-                    class="scene"
-                    data-id="17-360-hdr-18"
-                >
-                    <li class="text">Primary Bedroom</li>
-                </a>
-
-                <a
-                    href="javascript:void(0)"
-                    class="scene"
-                    data-id="18-360-hdr-19"
-                >
-                    <li class="text">Primary Bathroom</li>
-                </a>
-            </ul>
-        </div>
-
-        <div id="titleBar">
-            <h1 class="sceneName"></h1>
-        </div>
-
-        <a href="javascript:void(0)" id="autorotateToggle">
-            <img class="icon off" src="img/play.png" />
-            <img class="icon on" src="img/pause.png" />
-        </a>
-
-        <a href="javascript:void(0)" id="fullscreenToggle">
-            <img class="icon off" src="img/fullscreen.png" />
-            <img class="icon on" src="img/windowed.png" />
-        </a>
-
-        <a href="javascript:void(0)" id="sceneListToggle">
-            <img class="icon off" src="img/expand.png" />
-            <img class="icon on" src="img/collapse.png" />
-        </a>
-
-        <a
-            href="javascript:void(0)"
-            id="viewUp"
-            class="viewControlButton viewControlButton-1"
-        >
-            <img class="icon" src="img/up.png" />
-        </a>
-        <a
-            href="javascript:void(0)"
-            id="viewDown"
-            class="viewControlButton viewControlButton-2"
-        >
-            <img class="icon" src="img/down.png" />
-        </a>
-        <a
-            href="javascript:void(0)"
-            id="viewLeft"
-            class="viewControlButton viewControlButton-3"
-        >
-            <img class="icon" src="img/left.png" />
-        </a>
-        <a
-            href="javascript:void(0)"
-            id="viewRight"
-            class="viewControlButton viewControlButton-4"
-        >
-            <img class="icon" src="img/right.png" />
-        </a>
-        <a
-            href="javascript:void(0)"
-            id="viewIn"
-            class="viewControlButton viewControlButton-5"
-        >
-            <img class="icon" src="img/plus.png" />
-        </a>
-        <a
-            href="javascript:void(0)"
-            id="viewOut"
-            class="viewControlButton viewControlButton-6"
-        >
-            <img class="icon" src="img/minus.png" />
-        </a>
-
-        <script src="vendor/screenfull.min.js"></script>
-        <script src="vendor/bowser.min.js"></script>
-        <script src="vendor/marzipano.js"></script>
-
-        <script src="data.js"></script>
-        <script src="index.js"></script>
-    </body>
+</body>
 </html>
