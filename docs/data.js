@@ -532,8 +532,8 @@ var APP_DATA = {
           "target": "12-bedroom-1"
         },
         {
-          "yaw": 0,
-          "pitch": 0.6590554560390753,
+          "yaw": 0.754543933869544,
+          "pitch": 0.8661660129840456,
           "rotation": 0,
           "target": "13-upstairs-hallway-1"
         }
