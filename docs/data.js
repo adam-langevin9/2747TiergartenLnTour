@@ -793,7 +793,7 @@ var APP_DATA = {
           "yaw": 2.2002503797077093,
           "pitch": 0.5621886511012129,
           "rotation": 0,
-          "target": "16-upstairs-hallway-2"
+          "target": "15-upstairs-hallway-2"
         }
       ],
       "infoHotspots": []
